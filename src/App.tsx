@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Index } from 'pages/Index';
+
 export const App: React.FC = () => {
-  return <div>hi</div>;
+  return <Index />;
 };
