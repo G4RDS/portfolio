@@ -15,8 +15,17 @@ const works: Work[] = [
 ];
 
 export const PickUpWorks: React.FC = () => {
+  const width = 384 + (works.length - 1) * 16;
+  const height = 288 + (works.length - 1) * 16;
+
   return (
-    <div className="relative w-96 h-72">
+    <div
+      className="relative"
+      style={{
+        width,
+        height,
+      }}
+    >
       {works.reverse().map((work, index) => (
         <PickUpWorkItem
           src={work.imageUrl}
