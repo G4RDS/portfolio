@@ -5,6 +5,7 @@ import { Navigation } from 'components/Navigation/Navigation';
 import { NavigationItem } from 'components/Navigation/NavigationItem';
 import { AboutMeSection } from 'components/AboutMeSection/AboutMeSection';
 import { WorksSection } from 'components/WorksSection/WorksSection';
+import { SkillsSection } from 'components/SkillsSection/SkillsSection';
 
 export const Index: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const Index: React.FC = () => {
         <div className="pl-12">
           <AboutMeSection />
           <WorksSection />
+          <SkillsSection />
         </div>
       </div>
     </Layout>
