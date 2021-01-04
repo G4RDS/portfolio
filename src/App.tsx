@@ -7,7 +7,7 @@ import {
   rpxTransformers,
 } from '@xstyled/styled-components';
 
-import { Index } from 'pages/Index';
+import { Index } from 'pages/Index/Index';
 
 const theme = {
   ...defaultTheme,
