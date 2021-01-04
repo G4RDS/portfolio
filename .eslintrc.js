@@ -14,11 +14,8 @@ module.exports = {
     },
   },
   rules: {
-    'no-irregular-whitespace': [
-      'error',
-      { skipStrings: true, skipTemplates: true, skipComments: true },
-    ],
     'react/prop-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
   settings: {
     react: {
