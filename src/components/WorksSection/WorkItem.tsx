@@ -20,8 +20,8 @@ export const WorkItem: React.FC<Props> = ({
       <img src={imageUrl} alt={imageAlt} />
       <div className="flex flex-col justify-between p-6">
         <div>
-          <h2 className="text-3xl text-gray-700 font-bold">{name}</h2>
-          <p className="mt-3 text-lg text-gray-600">{description}</p>
+          <h2 className="text-2xl text-gray-700 font-bold">{name}</h2>
+          <p className="mt-3 text-base text-gray-600">{description}</p>
         </div>
         <div>
           {tags.map((tag, index) => (
