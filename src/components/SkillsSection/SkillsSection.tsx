@@ -8,7 +8,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section className="mt-12">
       <SectionTitle>Skills</SectionTitle>
-      <div className="grid grid-flow-col auto-cols-min gap-6">
+      <div className="grid grid-flow-col auto-cols-min gap-6 mt-8">
         {skills.map((skill) => (
           <SkillItem {...skill} key={skill.id} />
         ))}
