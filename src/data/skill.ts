@@ -1,14 +1,43 @@
-import { Skill } from 'consts/skill';
+import { SkillCategory } from 'consts/skill';
 
-export const skills: Skill[] = [
+export const skillCategories: SkillCategory[] = [
   {
-    id: '1',
-    imageUrl: '',
-    name: 'React',
+    name: 'Front-end',
+    skills: [
+      {
+        name: 'React',
+        imageUrl: '',
+      },
+      {
+        name: 'Next.js',
+        imageUrl: '',
+      },
+    ],
   },
   {
-    id: '2',
-    imageUrl: '',
-    name: 'Next.js',
+    name: 'Infrastructure',
+    skills: [
+      {
+        name: 'GCP',
+        imageUrl: '',
+      },
+      {
+        name: 'Firebase',
+        imageUrl: '',
+      },
+      {
+        name: 'Vercel',
+        imageUrl: '',
+      },
+    ],
+  },
+  {
+    name: 'Design',
+    skills: [
+      {
+        name: 'Adobe XD',
+        imageUrl: '',
+      },
+    ],
   },
 ];

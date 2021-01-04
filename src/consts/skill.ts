@@ -1,5 +1,9 @@
+export interface SkillCategory {
+  name: string;
+  skills: Skill[];
+}
+
 export interface Skill {
-  id: string;
   name: string;
   imageUrl: string;
 }
