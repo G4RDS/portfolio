@@ -1,5 +1,10 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 export const Layout: React.FC = ({ children }) => {
-  return <div className="min-h-full p-8 bg-gray-50 ">{children}</div>;
+  return (
+    <x.div minHeight="full" p={8} backgroundColor="gray-50">
+      {children}
+    </x.div>
+  );
 };
