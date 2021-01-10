@@ -1,16 +1,33 @@
-import { Avatar } from 'components/Avatar';
 import React from 'react';
+import styled, { x } from '@xstyled/styled-components';
+
+import { Avatar } from 'components/Avatar';
 
 export const NameAndTitle: React.FC = () => {
   return (
-    <div className="flex items-center">
+    <Container>
       <Avatar src="/avatar.jpg" size={128} />
-      <div className="pl-8">
-        <h1 className="text-5xl font-bold text-gray-700">G4RDS</h1>
-        <div className="text-3xl font-medium text-gray-700">
-          Front-end engineer
-        </div>
-      </div>
-    </div>
+      <x.div pl={8}>
+        <Name>G4RDS</Name>
+        <Title>Front-end engineer</Title>
+      </x.div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Name = styled.h1`
+  color: gray-700;
+  font-size: 5xl;
+  font-weight: bold;
+`;
+
+const Title = styled.div`
+  color: gray-700;
+  font-size: 3xl;
+  font-weight: medium;
+`;
