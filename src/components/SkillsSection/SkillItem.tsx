@@ -1,5 +1,7 @@
-import { Avatar } from 'components/Avatar';
 import React from 'react';
+import { x } from '@xstyled/styled-components';
+
+import { Avatar } from 'components/Avatar';
 
 interface Props {
   imageUrl: string;
@@ -8,11 +10,17 @@ interface Props {
 
 export const SkillItem: React.FC<Props> = ({ imageUrl, name }) => {
   return (
-    <div className="w-24">
-      <Avatar src={imageUrl} size={96} />
-      <div className="text-base text-gray-700 font-bold text-center">
+    <x.li w={24}>
+      <Avatar src={imageUrl} sizePx={96} />
+      <x.div
+        color="gray-700"
+        fontSize="base"
+        lineHeight="normal"
+        fontWeight="bold"
+        textAlign="center"
+      >
         {name}
-      </div>
-    </div>
+      </x.div>
+    </x.li>
   );
 };

@@ -1,19 +1,15 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 import { pickUpWorks } from 'data/work';
 import { PickUpWorkItem } from './PickUpWorkItem';
 
 export const PickUpWorks: React.FC = () => {
-  const width = 384 + (pickUpWorks.length - 1) * 16;
-  const height = 288 + (pickUpWorks.length - 1) * 16;
-
   return (
-    <div
-      className="relative"
-      style={{
-        width,
-        height,
-      }}
+    <x.div
+      position="relative"
+      w={384 + (pickUpWorks.length - 1) * 16}
+      h={288 + (pickUpWorks.length - 1) * 16}
     >
       {pickUpWorks.reverse().map((work, index) => (
         <PickUpWorkItem
@@ -22,6 +18,6 @@ export const PickUpWorks: React.FC = () => {
           key={work.id}
         />
       ))}
-    </div>
+    </x.div>
   );
 };

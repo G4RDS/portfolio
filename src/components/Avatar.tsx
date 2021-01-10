@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
+import { x } from '@xstyled/styled-components';
 
-const errorSrc =
-  'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+import { transparentSrc } from 'consts/image';
 
 interface Props {
   src: string;
-  size: number;
+  sizePx: number;
 }
 
-export const Avatar: React.FC<Props> = ({ src, size }) => {
+export const Avatar: React.FC<Props> = ({ src, sizePx }) => {
   const [isError, setIsError] = useState(false);
 
   return (
-    <img
-      className="rounded-full"
-      src={isError ? errorSrc : src}
-      width={size}
-      height={size}
-      style={{ width: size, height: size }}
+    <x.img
+      src={isError ? transparentSrc : src}
+      width={sizePx}
+      height={sizePx}
       onError={() => {
         setIsError(true);
       }}
+      w={`${sizePx}px`}
+      h={`${sizePx}px`}
+      borderRadius="full"
     />
   );
 };

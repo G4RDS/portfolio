@@ -1,4 +1,5 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 import { SectionTitle } from 'components/SectionTitle';
 import { skillCategories } from 'data/skill';
@@ -6,13 +7,13 @@ import { SkillCategory } from './SkillCategory';
 
 export const SkillsSection: React.FC = () => {
   return (
-    <section className="mt-12">
+    <x.section mt={12}>
       <SectionTitle>Skills</SectionTitle>
-      <div className="mt-8">
+      <x.div mt={8}>
         {skillCategories.map((category) => (
           <SkillCategory {...category} key={category.name} />
         ))}
-      </div>
-    </section>
+      </x.div>
+    </x.section>
   );
 };

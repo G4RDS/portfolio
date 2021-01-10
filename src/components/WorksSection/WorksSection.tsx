@@ -1,4 +1,5 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 import { works } from 'data/work';
 import { SectionTitle } from 'components/SectionTitle';
@@ -6,13 +7,13 @@ import { WorkItem } from './WorkItem';
 
 export const WorksSection: React.FC = () => {
   return (
-    <section className="mt-12">
+    <x.section mt={12}>
       <SectionTitle>Works</SectionTitle>
-      <div className="grid grid-cols-2 gap-8 mt-8">
+      <x.div display="grid" gridTemplateColumns={2} gap={8} mt={8}>
         {works.map((work) => (
           <WorkItem {...work} key={work.id} />
         ))}
-      </div>
-    </section>
+      </x.div>
+    </x.section>
   );
 };

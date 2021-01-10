@@ -1,4 +1,5 @@
 import React from 'react';
+import styled, { x } from '@xstyled/styled-components';
 
 interface Props {
   imageUrl: string;
@@ -16,28 +17,73 @@ export const WorkItem: React.FC<Props> = ({
   tags,
 }) => {
   return (
-    <div className="flex rounded-3xl overflow-hidden shadow-lg bg-white">
-      <img
-        className="w-0 flex-1 max-w-xs object-cover"
-        src={imageUrl}
-        alt={imageAlt}
-      />
-      <div className="flex-1 flex flex-col justify-between p-6">
+    <Container>
+      <StyledImage src={imageUrl} alt={imageAlt} />
+      <InfoWrapper>
         <div>
-          <h2 className="text-2xl text-gray-700 font-bold">{name}</h2>
-          <p className="mt-3 text-base text-gray-600">{description}</p>
+          <WorkName>{name}</WorkName>
+          <WorkDescription>{description}</WorkDescription>
         </div>
-        <div className="mt-3">
+        <x.div mt={3}>
           {tags.map((tag, index) => (
-            <span
-              className="inline-block h-8 px-4 rounded-2xl bg-blue-500 text-white font-bold leading-8"
-              key={index}
-            >
-              {tag}
-            </span>
+            <Tag key={index}>{tag}</Tag>
           ))}
-        </div>
-      </div>
-    </div>
+        </x.div>
+      </InfoWrapper>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  border-radius: 3xl;
+
+  background: white;
+  box-shadow: lg;
+
+  overflow: hidden;
+`;
+
+const StyledImage = styled.img`
+  flex: 1;
+
+  width: 0;
+  max-width: 80;
+  object-fit: cover;
+`;
+
+const InfoWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 6;
+`;
+
+const WorkName = styled.h2`
+  color: gray-700;
+  font-size: 2xl;
+  line-height: loose;
+  font-weight: bold;
+`;
+
+const WorkDescription = styled.p`
+  color: gray-600;
+  margin-top: 3;
+  font-size: base;
+  line-height: 1.5rem;
+`;
+
+const Tag = styled.span`
+  display: inline-block;
+
+  height: 8;
+  padding: 0 4;
+  border-radius: 2xl;
+  background-color: primary-500;
+
+  color: white;
+  font-weight: bold;
+  line-height: 2rem;
+`;
