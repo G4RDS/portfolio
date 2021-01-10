@@ -11,7 +11,7 @@ interface Props {
 export const SkillItem: React.FC<Props> = ({ imageUrl, name }) => {
   return (
     <x.li w={24}>
-      <Avatar src={imageUrl} size={96} />
+      <Avatar src={imageUrl} sizePx={96} />
       <x.div
         color="gray-700"
         fontSize="base"

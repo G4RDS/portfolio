@@ -6,7 +6,7 @@ import { Avatar } from 'components/Avatar';
 export const NameAndTitle: React.FC = () => {
   return (
     <Container>
-      <Avatar src="/avatar.jpg" size={128} />
+      <Avatar src="/avatar.jpg" sizePx={128} />
       <x.div pl={8}>
         <Name>G4RDS</Name>
         <Title>Front-end engineer</Title>
