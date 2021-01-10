@@ -1,4 +1,5 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 import { Layout } from 'components/Layout';
 import { Navigation } from 'components/Navigation/Navigation';
@@ -22,14 +23,14 @@ export const Index: React.FC = () => {
         <NavigationItem name="Skills" icon="code" href="#skills" />
         <NavigationItem name="Career" icon="briefcase" href="#career" />
       </Navigation>
-      <div className="pl-72">
-        <div className="pl-12">
+      <x.div pl={72}>
+        <x.div pl={12}>
           <AboutMeSection />
           <WorksSection />
           <SkillsSection />
           <CareerSection />
-        </div>
-      </div>
+        </x.div>
+      </x.div>
     </Layout>
   );
 };
