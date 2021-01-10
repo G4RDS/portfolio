@@ -1,5 +1,10 @@
 import React from 'react';
+import { x } from '@xstyled/styled-components';
 
 export const SectionTitle: React.FC = ({ children }) => {
-  return <h1 className="text-3xl text-gray-700 font-bold">{children}</h1>;
+  return (
+    <x.h1 color="gray-700" fontSize="3xl" fontWeight="bold">
+      {children}
+    </x.h1>
+  );
 };
