@@ -1,0 +1,15 @@
+name: CI
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up FontAwesome npm config
+        run: |
+          npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+          npm config set "//npm.fontawesome.com/:_authToken" 825B2ECE-5FC2-4A35-88FB-CB3FED4DEBF3
+      - name: Install modules
+        run: yarn
+      - name: Lint
+        run: yarn lint
